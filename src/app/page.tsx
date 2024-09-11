@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Header from './components/Header';
+import { InformationCircleIcon, PlayIcon } from '@heroicons/react/16/solid';
 
 export default function Home() {
   return (
@@ -26,9 +27,11 @@ export default function Home() {
           </p>
           <div className='flex space-x-3'>
             <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
+              <PlayIcon className='h-6' aria-label='play no video' />
               Play
             </button>
-            <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
+            <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-white transition hover:opacity-75 md:px-8 md:py-2.5'>
+              <InformationCircleIcon className='h-6' />
               More Info
             </button>
           </div>
