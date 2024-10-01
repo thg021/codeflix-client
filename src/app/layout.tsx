@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Header from './components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='scrollbar-hide bg-[#141414] text-white'>{children}</body>
+      <body className='no-scrollbar bg-[#141414] text-white'>
+        <div className='no-scrollbar relative h-screen overflow-x-hidden bg-gradient-to-b lg:h-[140vh]'>
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
